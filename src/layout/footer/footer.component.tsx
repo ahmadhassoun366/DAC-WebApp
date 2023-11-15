@@ -104,7 +104,7 @@ export default function FooterComponent() {
 
         <div className="flex md:flex-row flex-col justify-between gap-y-5">
           <h1 className="text-sm font-medium mt-[30px] dark:text-white text-abrandc-dark-black">
-            @WOM Protocol Pte. Ltd. All Rights reserved
+            @DAC. All Rights reserved
           </h1>
           <div className="flex gap-x-12 px-8 text-sm font-medium text-agrey-600  md:items-center">
             <Link href="#">Terms</Link>
