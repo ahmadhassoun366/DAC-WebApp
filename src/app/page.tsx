@@ -5,7 +5,7 @@ export default function Home() {
   return (
     <main className="">
       <HeaderComponent />
-      Hello
+      Hello Ahmad
       <FooterComponent />
     </main>
   );
