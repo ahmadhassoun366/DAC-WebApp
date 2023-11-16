@@ -1,6 +1,6 @@
 "use client";
 
-import { useState, useContext } from "react";
+import { useState, useContext, SetStateAction } from "react";
 import Link from "next/link";
 
 const Index = () => {
@@ -8,25 +8,25 @@ const Index = () => {
   const [password, setPassword] = useState("");
   const [error] = useState("");
 
-  const handleEmailChange = (e) => {
-    setEmail(e.target.value);
-  };
+  //   const handleEmailChange = (e: { target: { value: SetStateAction<string>; }; }) => {
+  //     setEmail(e.target.value);
+  //   };
 
-  const handlePasswordChange = (e) => {
-    setPassword(e.target.value);
-  };
+  //   const handlePasswordChange = (e) => {
+  //     setPassword(e.target.value);
+  //   };
 
-  const handleLogin = async (e) => {
-    // console.log(setPassword);
-    // console.log(setEmail);
-    // e.preventDefault();
-    // try {
-    //   // Call your login function passing email and password
-    //   // await login(email, password);
-    // } catch (error) {
-    //   toast.error("Invalid email or password"); // Set error message if login fails
-    // }
-  };
+  //   const handleLogin = async (e) => {
+  //     // console.log(setPassword);
+  //     // console.log(setEmail);
+  //     // e.preventDefault();
+  //     // try {
+  //     //   // Call your login function passing email and password
+  //     //   // await login(email, password);
+  //     // } catch (error) {
+  //     //   toast.error("Invalid email or password"); // Set error message if login fails
+  //     // }
+  //   };
   return (
     <>
       <div className=" bg-gray-100 flex flex-row justify-center py-28">
@@ -38,10 +38,7 @@ const Index = () => {
           />
         </div>
         <div className="sm:w-2/4 w-11/12 flex justify-center">
-          <form
-            onSubmit={handleLogin}
-            className="relative py-3 sm:w-3/4 w-full"
-          >
+          <form className="relative py-3 sm:w-3/4 w-full">
             <div className="absolute inset-0 bg-CustomColor4 shadow-lg transform -skew-y-6 sm:skew-y-0 sm:-rotate-6 sm:rounded-3xl md:block hidden "></div>
             <div className="relative px-4 py-10 bg-white shadow-lg sm:rounded-3xl sm:p-20">
               <div className="max-w-md mx-auto ">
@@ -61,7 +58,6 @@ const Index = () => {
                         placeholder="Email address"
                         type="email"
                         value={email}
-                        onChange={handleEmailChange}
                       />
                       <label
                         htmlFor="email"
@@ -79,7 +75,6 @@ const Index = () => {
                         className="peer placeholder-transparent h-10 w-full border-b-2 border-gray-300 text-gray-900 focus:outline-none focus:borer-rose-600"
                         placeholder="Password"
                         value={password}
-                        onChange={handlePasswordChange}
                       />
                       <label
                         htmlFor="password"
