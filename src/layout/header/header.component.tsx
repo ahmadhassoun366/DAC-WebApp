@@ -14,6 +14,7 @@ import ThemeService from "@/shared/services/theme/theme.service";
 import ThemeSvcContext from "@/shared/services/theme/theme.context";
 import { Theme } from "@/shared/services/theme/theme.type";
 import ROUTES from "@/static/router.data";
+import { FiSun } from "react-icons/fi";
 
 export default function HeaderComponent() {
   const pathname = usePathname();
@@ -114,7 +115,7 @@ export default function HeaderComponent() {
               </div>
             ) : (
               <div className="dark:text-white">
-                <i className="fa-lf fas fa-sun" />
+               <FiSun/> 
               </div>
             )}
             {/* <i
