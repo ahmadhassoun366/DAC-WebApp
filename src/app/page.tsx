@@ -80,7 +80,7 @@ export default function Home() {
         </div>
       </section>
       {/* Price Section */}
-      <section id="pricing" className="bg-white dark:bg-gray-900">
+      <section id="pricing" className="bg-abrandc-light-grey dark:bg-abrandc-dark-blackish">
         <div className="container mx-auto px-6 pt-28">
           <div
             className="xl:-mx-8 xl:flex xl:items-center"
@@ -110,7 +110,7 @@ export default function Home() {
               </Link>
             </div>
 
-            <div className="flex-1 xl:mx-8">
+            <div className="flex-1 xl:mx-8 ">
               <div className="mt-8 space-y-8 md:-mx-4 md:flex md:items-center md:justify-center md:space-y-0 xl:mt-0">
                 {plans.map((plan, index) => (
                   <div
@@ -175,7 +175,7 @@ export default function Home() {
         </div>
       </section>
       {/* Services Section */}
-      <section id="faq" className="bg-gray-50 dark:bg-gray-800">
+      <section id="faq" className="bg-white dark:bg-abrandc-dark-grey">
         <div className="py-8 px-4 mx-auto max-w-screen-xl sm:py-16 lg:px-6">
           <div className="max-w-screen-md mb-8 lg:mb-16">
             <h2 className="mb-4 text-4xl font-extrabold text-gray-900 dark:text-white">

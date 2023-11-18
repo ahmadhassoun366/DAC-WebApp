@@ -47,7 +47,7 @@ export default function FooterComponent() {
   ];
 
   return (
-    <div className="dark:bg-abrandc-dark-grey bg-abrandc-light-grey md:py-20 py-10 overflow-hidden">
+    <div className="dark:bg-abrandc-dark-blackish bg-abrandc-light-grey md:py-20 py-10 overflow-hidden">
       <div className="container-2 mx-auto">
         <div className="flex md:flex-row flex-col md:justify-between md:items-center items-start gap-y-5">
           {/* Navigation */}
