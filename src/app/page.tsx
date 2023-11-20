@@ -17,7 +17,7 @@ export default function Home() {
       <main className="dark:bg-abrandc-dark-blackish bg-white">
         {/* Hero Section */}
         <main className="dark:bg-abrandc-dark-blackish bg-white container-2 mx-auto space-y-20">
-          <section className="py-20">
+          <section className="py-20 border-b-2">
             <div className="grid max-w-screen-xxl px-0 py-8 mx-auto lg:gap-8 xl:gap-0 lg:py-10 lg:grid-cols-12 lg:m-auto ">
               <div className="lg:m-auto place-self-center lg:col-span-7 z-10 text-center lg:text-start">
                 <h1 className="max-w-2xl mb-6 text-4xl leading-none md:text-5xl xl:text-4xl text-abrandc-dark-blackish dark:text-white font-spaceGrotesk font-bold">
@@ -29,7 +29,7 @@ export default function Home() {
                 </p>
                 <Link
                   href="#"
-                  className="inline-flex items-center justify-center px-5 py-3 mr-3 text-base font-medium text-center text-white rounded-lg bg-blue-500 focus:ring-1 focus:ring-gray-300 hover:bg-blue-700"
+                  className="inline-flex items-center justify-center px-5 py-3 mr-3 text-base font-medium text-center text-white rounded-lg bg-blue-500 focus:ring-1 focus:ring-gray-300 hover:bg-blue-700 hover:shadow-lg hover:shadow-blue-500/50"
                 >
                   Get started
                   <GoArrowRight className="mx-1" size={25} />
@@ -45,7 +45,7 @@ export default function Home() {
                 <Image
                   src={bg}
                   alt=""
-                  className="lg:w-full absolute top-10 m-auto blur-[20px] lg:blur-[0] lg:relative z-0 mr-0"
+                  className="lg:w-full absolute top-10 m-auto blur-[20px] lg:blur-[0] lg:relative z-0 mr-0 lg:drop-shadow-2xl"
                 />
               </div>
             </div>
@@ -54,7 +54,7 @@ export default function Home() {
           {/* Partnerships Section */}
           <section
             id="contact"
-            className="container mx-auto px-6 py-16 pt-10 text-center"
+            className="container mx-auto px-6 py-16 pt-0 text-center border-b-2"
           >
             <div className="m-auto mt-2 max-w-screen-xxl ">
               <h1 className="text-2xl mb-20 font-bold dark:text-white text-abrandc-dark-blackish md:text-4xl">
@@ -102,7 +102,7 @@ export default function Home() {
             </div>
           </section>
           {/* Services Section */}
-          <section id="faq" className="">
+          <section id="faq" className="pb-20 border-b-2">
             <div className="space-y-10">
               <div className="flex flex-col justify-center items-center gap-4">
                 <h2 className="text-4xl font-extrabold text-gray-900 dark:text-white">
