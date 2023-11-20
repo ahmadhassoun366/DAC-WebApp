@@ -11,19 +11,19 @@ import { FaTwitter, FaTelegramPlane, FaDiscord } from "react-icons/fa";
 export default function FooterComponent() {
   const navigation = [
     {
-      label: "Explore",
+      label: "Who We Are?",
       href: "#",
     },
     {
-      label: "Transactions",
+      label: "Retail & E-Commerce",
       href: "#",
     },
     {
-      label: "Nodes",
+      label: "Information Technology",
       href: "#",
     },
     {
-      label: "PWR Wallet",
+      label: "Finance & Insurance",
       href: "#",
     },
   ];
@@ -47,7 +47,7 @@ export default function FooterComponent() {
   ];
 
   return (
-    <div className="dark:bg-abrandc-dark-blackish bg-abrandc-light-grey md:py-20 py-10 overflow-hidden">
+    <div className="dark:bg-abrandc-dark-grey bg-abrandc-light-grey md:py-20 py-10 overflow-hidden">
       <div className="container-2 mx-auto">
         <div className="flex md:flex-row flex-col md:justify-between md:items-center items-start gap-y-5">
           {/* Navigation */}
