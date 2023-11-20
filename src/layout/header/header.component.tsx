@@ -86,7 +86,7 @@ export default function HeaderComponent() {
         <div
           className={`${isOpen ? "block" : "hidden"} w-full 
         
-        gap-24 dark:bg-abrandc-dark-blackish bg-white px-6 py-4  transition-all duration-300 ease-in-out lg:relative lg:flex lg:w-auto lg:translate-x-0 lg:items-center lg:bg-transparent lg:p-0 lg:opacity-100`}
+        gap-24  px-6 py-4  transition-all duration-300 ease-in-out lg:relative lg:flex lg:w-auto lg:translate-x-0 lg:items-center lg:bg-transparent lg:p-0 lg:opacity-100`}
         >
           <div className="flex flex-col space-y-4 lg:space-y-0 lg:space-x-20 lg:flex-row">
             {navLinks.map((link) => (
