@@ -1,84 +1,81 @@
 import React from "react";
+import Image from "next/image";
+import imgSignup from "../../../../public/images/imgSignup.jpg";
 
 const Index = () => {
   return (
-    <>
-      <div className="min-h-screen bg-gray-100 py-24 flex flex-col items-center justify-center sm:py-24">
-        <div className="relative py-3 sm:max-w-xl sm:mx-auto">
-          <div className="relative px-4 py-10 bg-white mx-8 md:mx-0 shadow rounded-3xl sm:p-10">
-            <div className="max-w-md mx-auto">
-              <div className="flex items-center justify-center space-x-5">
-                <h1 className="font-bold   text-gray-900 text-center capitalize text-2xl">
-                  Sign up
-                </h1>
-              </div>
-              <form className="divide-y divide-gray-400 my-5">
-                <input
-                  type="text"
-                  placeholder="First Name"
-                  name="firstName"
-                  required
-                  className="w-full h-10 mb-2 px-5"
-                />
-                <input
-                  type="text"
-                  placeholder="Last Name"
-                  name="lastName"
-                  required
-                  className="w-full h-10 mb-2  px-5"
-                />
-                <input
-                  type="email"
-                  placeholder="Email"
-                  name="email"
-                  required
-                  className="w-full h-10 mb-2  px-5"
-                />
-                <input
-                  type="phone"
-                  placeholder="phone"
-                  name="phone"
-                  required
-                  className="w-full h-10 mb-2  px-5"
-                />
-                <input
-                  type="password"
-                  placeholder="Password"
-                  name="password"
-                  required
-                  className="w-full h-10 mb-2  px-5"
-                />
-                <input
-                  type="password"
-                  placeholder="Confirm Password"
-                  name="confirmPassword"
-                  required
-                  className="w-full h-10 mb-2  px-5"
-                />
-                <hr />
-                <button
-                  type="submit"
-                  className="mt-4 w-full font-semibold text-white bg-gray-900 py-2 rounded-md"
-                >
-                  Signup
-                </button>
-              </form>
-              <div className="py-5 text-sm text-center">
-                <div className="py-2">Or signup with</div>
-                <div className="flex justify-center gap-4">
-                  <button className="w-8 h-8 rounded-md flex items-center justify-center bg-white text-white">
-                    <img src="icons8-facebook-144.png" alt="" />
-                  </button>
-                  <button className="w-8 h-8 rounded-md flex items-center justify-center bg-white text-white">
-                    <img src="icons8-gmail-144.png" alt="" />
-                  </button>
-                </div>
-              </div>
+
+    <div className="h-full p-8 bg-gray-100 flex items-center justify-center" >
+
+      <div className="flex gap-1 w-5/6 h-5/6 drop-shadow-lg  " style={{ backgroundColor: '#CAE2FE', }}>
+        <div className="hidden lg:inline-flex w-1/2">
+          <Image src={imgSignup} alt="" />
+        </div>
+        <div className="lg:w-1/2 lg:pl-20 lg:pr-20  pt-5 pb-5 pl-5 pr-5">
+          <h1 className="text-center text-3xl font-semibold mb-5">Sign up</h1>
+          <form>
+            <label htmlFor="firstName">First name</label>
+            <input
+              type="text"
+              placeholder="First Name"
+              name="firstName"
+              required
+              className="w-full h-10 mb-2 px-5 rounded-md"
+            />
+            <label htmlFor="lastName">last name</label>
+            <input
+              type="text"
+              placeholder="Last Name"
+              name="lastName"
+              required
+              className="w-full h-10 mb-2  px-5 rounded-md"
+            />
+            <label htmlFor="email">Email</label>
+            <input
+              type="email"
+              placeholder="Email"
+              name="email"
+              required
+              className="w-full h-10 mb-2  px-5 rounded-md"
+            />
+            <label htmlFor="phone">Phone</label>
+            <input
+              type="phone"
+              placeholder="phone"
+              name="phone"
+              required
+              className="w-full h-10 mb-2  px-5 rounded-md"
+            />
+            <label htmlFor="password">Password</label>
+            <input
+              type="password"
+              placeholder="Password"
+              name="password"
+              required
+              className="w-full h-10 mb-2  px-5 rounded-md"
+            />
+            <label htmlFor="confirmPassword">Confirm password</label>
+            <input
+              type="password"
+              placeholder="Confirm Password"
+              name="confirmPassword"
+              required
+              className="w-full h-10 mb-2  px-5 rounded-md"
+            />
+            <div className="text-center">
+              <button
+                type="submit"
+                className="mt-4 w-2/6 font-semibold text-white bg-blue-700 py-2 rounded-md"
+              >
+                Submit
+              </button>
             </div>
-          </div>
+
+
+          </form>
         </div>
       </div>
-    </>
+    </div>
   );
 };
 

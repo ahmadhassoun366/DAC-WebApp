@@ -2,6 +2,8 @@
 
 import { useState, useContext, SetStateAction } from "react";
 import Link from "next/link";
+import Image from "next/image";
+import imgLogin from "../../../../public/images/imgLogin.jpg";
 
 const Index = () => {
   const [email, setEmail] = useState("");
@@ -28,84 +30,62 @@ const Index = () => {
   //     // }
   //   };
   return (
-    <>
-      <div className=" bg-gray-100 flex flex-row justify-center py-28">
-        <div className="flex items-center justify-center sm:w-[40%] w-0">
-          <img
-            src="https://mdbcdn.b-cdn.net/img/Photos/new-templates/bootstrap-login-form/draw2.svg"
-            alt="Logo"
-            className="md:block hidden"
-          />
+
+
+
+
+
+    <div className="h-full p-8 bg-gray-100 flex items-center justify-center" >
+
+      <div className="flex gap-1 w-5/6 h-5/6 drop-shadow-lg  " style={{ backgroundColor: '#CAE2FE', }}>
+        <div className="hidden lg:inline-flex w-1/2">
+          <Image src={imgLogin} alt="" />
         </div>
-        <div className="sm:w-2/4 w-11/12 flex justify-center">
-          <form className="relative py-3 sm:w-3/4 w-full">
-            <div className="absolute inset-0 bg-CustomColor4 shadow-lg transform -skew-y-6 sm:skew-y-0 sm:-rotate-6 sm:rounded-3xl md:block hidden "></div>
-            <div className="relative px-4 py-10 bg-white shadow-lg sm:rounded-3xl sm:p-20">
-              <div className="max-w-md mx-auto ">
-                <div className="flex justify-center items-center">
-                  <h1 className="text-3xl font-semibold ">
-                    Sign in to account
-                  </h1>
-                </div>
-                <div className="divide-y divide-gray-200">
-                  <div className="py-8 text-base leading-6 space-y-4 text-gray-700 sm:text-lg sm:leading-7">
-                    <div className="relative">
-                      <input
-                        autoComplete="off"
-                        id="email"
-                        name="email"
-                        className="peer placeholder-transparent h-10 w-full border-b-2 border-gray-300 text-gray-900 focus:outline-none focus:borer-rose-600"
-                        placeholder="Email address"
-                        type="email"
-                        value={email}
-                      />
-                      <label
-                        htmlFor="email"
-                        className="absolute left-0 -top-3.5 text-gray-600 text-sm peer-placeholder-shown:text-base peer-placeholder-shown:text-gray-440 peer-placeholder-shown:top-2 transition-all peer-focus:-top-3.5 peer-focus:text-gray-600 peer-focus:text-sm"
-                      >
-                        Email Address
-                      </label>
-                    </div>
-                    <div className="relative">
-                      <input
-                        autoComplete="off"
-                        id="password"
-                        name="password"
-                        type="password"
-                        className="peer placeholder-transparent h-10 w-full border-b-2 border-gray-300 text-gray-900 focus:outline-none focus:borer-rose-600"
-                        placeholder="Password"
-                        value={password}
-                      />
-                      <label
-                        htmlFor="password"
-                        className="absolute left-0 -top-3.5 text-gray-600 text-sm peer-placeholder-shown:text-base peer-placeholder-shown:text-gray-440 peer-placeholder-shown:top-2 transition-all peer-focus:-top-3.5 peer-focus:text-gray-600 peer-focus:text-sm"
-                      >
-                        Password
-                      </label>
-                    </div>
-                    <div className="flex flex-col justify-center items-center gap-5 pt-5">
-                      <button
-                        className="bg-gray-900 text-base font-semibold  text-white rounded px-4 py-2 w-3/4  hover:bg-gray-300 hover:text-gray-900 transition-all  "
-                        type="submit"
-                      >
-                        Submit
-                      </button>
-                      <Link
-                        href="/signup"
-                        className=" text-sm text-CustomColor1 rounded-md underline-offset-8 underline"
-                      >
-                        Don&apos;t have an account?
-                      </Link>
-                      {error && <p>{error}</p>}
-                    </div>
-                  </div>
-                </div>
-              </div>
+        <div className="lg:w-1/2 lg:pl-20 lg:pr-20  pt-5 pb-5 pl-5 pr-5 flex items-center flex-col justify-center">
+          <h1 className="text-center text-3xl font-semibold mb-8">Sign in</h1>
+          <form>
+            <label htmlFor="email">Email</label>
+            <input
+              type="email"
+              placeholder="Enter your email"
+              name="email"
+              required
+              className="w-full h-10 mb-2 px-5 rounded-md"
+              value={email}
+              autoComplete="off"
+
+            />
+            <label htmlFor="password">Password</label>
+            <input
+              type="text"
+              placeholder="Enter your password"
+              name="password"
+              required
+              className="w-full h-10 mb-2  px-5 rounded-md"
+              value={password}
+              autoComplete="off"
+            />
+            <Link
+              href="/signup"
+              className=" text-sm text-CustomColor1 rounded-md underline-offset-8 underline"
+            >
+              Don&apos;t have an account?
+            </Link>
+
+            <div className="text-center">
+              <button
+                type="submit"
+                className="mt-8 w-2/6 font-semibold text-white bg-blue-700 py-2 rounded-md"
+              >
+                Submit
+              </button>
+              {error && <p>{error}</p>}
             </div>
           </form>
         </div>
       </div>
-    </>
+    </div>
+
   );
 };
 
