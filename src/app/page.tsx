@@ -2,7 +2,8 @@ import Image from "next/image";
 import HeaderComponent from "@/layout/header/header.component";
 import FooterComponent from "@/layout/footer/footer.component";
 import Link from "next/link";
-import bg from "../../public/images/urban.gif";
+import bg from "../../public/images/imgbg.png";
+import imgSB from "../../public/images/img2.gif";
 import { BiBlock } from "react-icons/bi";
 import { GoArrowRight } from "react-icons/go";
 import { FaLongArrowAltRight } from "react-icons/fa";
@@ -14,55 +15,64 @@ export default function Home() {
       <HeaderComponent />
       {/* Hero Section */}
       <section className="bg-gray-50 py-20">
-        <div className="grid max-w-screen-xl px-4 py-8 mx-auto lg:gap-8 xl:gap-0 lg:py-16 lg:grid-cols-12">
-          <div className="mr-auto place-self-center lg:col-span-7">
-            <h1 className="max-w-2xl mb-4 text-4xl font-extrabold leading-none md:text-5xl xl:text-4xl text-gray-900">
-              Efficient Business Management
-            </h1>
-            <p className="w-3/4 mb-6 font-light text-gray-400 lg:mb-8 md:text-lg lg:text-xl">
-              Empowering Your Business with Seamless Accounting and Store
-              Management
-            </p>
-            <Link
-              href="#"
-              className="inline-flex items-center justify-center px-5 py-3 mr-3 text-base font-medium text-center text-white rounded-lg bg-gray-900 focus:ring-1 focus:ring-gray-300"
-            >
-              Get started
-              <GoArrowRight className="mx-1" size={25} />
-            </Link>
-            <Link
-              href="#"
-              className="inline-flex items-center justify-center px-5 py-3 text-base font-medium text-center text-gray-900 border border-gray-400 rounded-lg hover:bg-gray-200 hover:text-gray-700 focus:ring-1 focus:ring-gray-900"
-            >
-              Speak to Sales
-            </Link>
+        <div className="grid max-w-screen-xxl px-0 py-8 mx-auto lg:gap-8 xl:gap-0 lg:py-10 lg:grid-cols-12 lg:m-auto ">
+          <div className="lg:m-auto place-self-center lg:col-span-7 z-10 text-center lg:text-start" >
+            
+              <h1 className="max-w-2xl mb-6 text-4xl leading-none md:text-5xl xl:text-4xl text-gray-900 font-spaceGrotesk font-bold">
+                Efficient Business Management
+              </h1>
+              <p className="lg:w-3/4 mb-6 font-light lg:text-gray-400 lg:mb-8 md:text-lg lg:text-xl text-gray-900">
+                Empowering Your Business with Seamless Accounting and Store
+                Management
+              </p>
+              <Link
+                href="#"
+                className="inline-flex items-center justify-center px-5 py-3 mr-3 text-base font-medium text-center text-white rounded-lg bg-blue-500 focus:ring-1 focus:ring-gray-300 hover:bg-blue-700"
+              >
+                Get started
+                <GoArrowRight className="mx-1" size={25} />
+              </Link>
+              <Link
+                href="#"
+                className="inline-flex items-center justify-center px-5 py-3 text-base font-medium text-center text-blue-500 border border-blue-500 rounded-lg hover:bg-blue-700 hover:text-white focus:ring-1 focus:ring-gray-900"
+              >
+                Speak to Sales
+              </Link>
+            
           </div>
-          <div className="hidden lg:mt-0 lg:col-span-4 lg:flex ">
-            <Image src={bg} alt="" className="w-full" />
+          <div className="mt-0 ml-0 lg:col-span-5 flex">
+            <Image src={bg} alt="" className="lg:w-full absolute top-10 m-auto blur-[20px] lg:blur-[0] lg:relative z-0 mr-0" />
           </div>
         </div>
       </section>
+
       {/* Partnerships Section */}
       <section
         id="contact"
-        className="container mx-auto px-6 py-16 pt-28 text-center"
+        className="container mx-auto px-6 py-16 pt-10 text-center"
       >
-        <div className="mx-auto max-w-lg">
-          <h1 className="text-3xl font-bold text-gray-900 md:text-4xl">
+        <div className="m-auto mt-2 max-w-screen-xxl ">
+          <h1 className="text-2xl mb-20 font-bold text-gray-900 md:text-4xl">
             Strategic Business Solution Partnerships
           </h1>
-
-          <p className="mt-6 text-gray-500">
-            Under our Strategic Business Solution Partnerships, we collaborate
-            with diverse businesses aiming to streamline their operations and
-            enhance their productivity. From accounting to store management and
-            beyond, our comprehensive suite of services caters to your unique
-            business needs. Join us to redefine your business strategies,
-            optimize efficiency and drive your business towards prolific growth.
-          </p>
-
-          <div className="mx-auto mt-6 w-full max-w-sm rounded-md border bg-transparent focus-within:border-gray-400 focus-within:ring focus-within:ring-gray-300 focus-within:ring-opacity-40 dark:border-gray-700 dark:focus-within:border-gray-300">
-            <form className="flex flex-col md:flex-row">
+          <div className="flex max-w-screen-xxl">
+            <div className="hidden lg:mt-0 lg:ml-0 lg:col-span-5 flex-1 lg:flex">
+              <Image src={imgSB} alt="" className="w-2/3 sm:w-full md:w-2/3 lg:w-full drop-shadow-lg" />
+            </div>
+            <div className="flex-1 flex flex-col items-center justify-center">
+              <h1 className="ml-0 text-left text-3xl font-bold text-gray-700 mb-4">Title</h1>
+              <p className="text-gray-500 text-center text-justify whitespace-pre-line">
+                Under our Strategic Business Solution Partnerships, we collaborate
+                with diverse businesses aiming to streamline their operations and
+                enhance their productivity. From accounting to store management and
+                beyond, our comprehensive suite of services caters to your unique
+                business needs. Join us to redefine your business strategies,
+                optimize efficiency and drive your business towards prolific growth.
+              </p>
+            </div>
+          </div>
+          <div className="mx-auto mt-20 w-full max-w-sm rounded-md border bg-transparent focus-within:border-gray-400 focus-within:ring focus-within:ring-gray-300 focus-within:ring-opacity-40 dark:border-gray-700 dark:focus-within:border-gray-300">
+            <form className="md:flex-row flex border border-black rounded-md">
               <input
                 type="email"
                 placeholder="Enter your email address"
@@ -71,14 +81,37 @@ export default function Home() {
 
               <button
                 type="button"
-                className="m-1 h-10 transform rounded-md bg-gray-900 px-4 py-2 text-white transition-colors duration-300 hover:bg-gray-500 focus:bg-gray-200 focus:outline-none"
+                className="m-1 h-10 transform rounded-md bg-blue-500 px-4 py-2 text-white transition-colors duration-300 hover:bg-gray-500 focus:bg-gray-200 focus:outline-none"
               >
                 Join Us
               </button>
+
+              
             </form>
           </div>
         </div>
       </section>
+      {/* services Section */}
+      <section
+        id="contact"
+        className=" mx-auto px-6 py-16 pt-10 text-center bg-gray-50"
+      >
+        <div className="m-auto mt-2 max-w-screen-xxl ">
+          <h1 className="text-2xl mb-10 font-bold text-gray-900 md:text-4xl">
+            Designed for business teams like yours
+          </h1>
+          <p className="text-xl mb-20  text-gray-500 md:text-2xl">Here at Flowbite we focus on markets where technology, innovation, and capital can unlock long-term value and drive economic growth.</p>
+          <div className="p-6 rounded-md relative bg-white drop-shadow-lg">
+            <div className="absolute top-0 left-1/2 transform -translate-x-1/2 -mt-5 bg-blue-500 rounded-full p-2">
+              yuy
+            </div>
+            <h1 className="text-3xl font-bold mb-4">title</h1>
+            <p className="">Lorem ipsum dolor sit amet consectetur adipisicing elit. Quae odit quis assumenda voluptatum nam quidem cumque repudiandae aspernatur, impedit ab quibusdam reprehenderit magni porro. Explicabo repudiandae enim eligendi excepturi culpa!</p>
+          </div>
+
+        </div>
+      </section>
+
       {/* Price Section */}
       <section id="pricing" className="bg-white dark:bg-gray-900">
         <div className="container mx-auto px-6 pt-28">

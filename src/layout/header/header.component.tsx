@@ -115,7 +115,7 @@ export default function HeaderComponent() {
               </div>
             ) : (
               <div className="dark:text-white">
-               <FiSun/> 
+                <FiSun />
               </div>
             )}
             {/* <i
