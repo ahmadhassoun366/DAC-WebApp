@@ -11,19 +11,19 @@ import { FaTwitter, FaTelegramPlane, FaDiscord } from "react-icons/fa";
 export default function FooterComponent() {
   const navigation = [
     {
-      label: "Explore",
+      label: "Who We Are?",
       href: "#",
     },
     {
-      label: "Transactions",
+      label: "Retail & E-Commerce",
       href: "#",
     },
     {
-      label: "Nodes",
+      label: "Information Technology",
       href: "#",
     },
     {
-      label: "PWR Wallet",
+      label: "Finance & Insurance",
       href: "#",
     },
   ];
