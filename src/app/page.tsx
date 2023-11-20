@@ -2,7 +2,7 @@ import Image from "next/image";
 import HeaderComponent from "@/layout/header/header.component";
 import FooterComponent from "@/layout/footer/footer.component";
 import Link from "next/link";
-import bg from "../../public/images/imgbg.png";
+import bg from "../../public/images/imgbg.gif";
 import imgSB from "../../public/images/img2.gif";
 import { BiBlock } from "react-icons/bi";
 import { GoArrowRight } from "react-icons/go";
