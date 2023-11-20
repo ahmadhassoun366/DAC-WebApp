@@ -30,14 +30,9 @@ const Index = () => {
   //     // }
   //   };
   return (
+    <div className="h-full p-8 flex items-center justify-center" >
 
-
-
-
-
-    <div className="h-full p-8 bg-gray-100 flex items-center justify-center" >
-
-      <div className="flex gap-1 w-5/6 h-5/6 drop-shadow-lg  " style={{ backgroundColor: '#CAE2FE', }}>
+      <div className="flex gap-1 w-5/6 h-5/6 drop-shadow-lg  " style={{ backgroundColor: '#F5F5F5', }}>
         <div className="hidden lg:inline-flex w-1/2">
           <Image src={imgLogin} alt="" />
         </div>
@@ -50,7 +45,7 @@ const Index = () => {
               placeholder="Enter your email"
               name="email"
               required
-              className="w-full h-10 mb-2 px-5 rounded-md"
+              className="w-full h-10 mb-2 px-5 rounded-md drop-shadow"
               value={email}
               autoComplete="off"
 
@@ -61,7 +56,7 @@ const Index = () => {
               placeholder="Enter your password"
               name="password"
               required
-              className="w-full h-10 mb-2  px-5 rounded-md"
+              className="w-full h-10 mb-2  px-5 rounded-md drop-shadow"
               value={password}
               autoComplete="off"
             />
