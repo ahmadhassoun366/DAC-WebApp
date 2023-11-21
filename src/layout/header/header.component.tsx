@@ -101,7 +101,7 @@ export default function HeaderComponent() {
           </div>
           <div className="flex gap-2">
           <Link
-            className="mt-4 block h-10 transform rounded-full border px-5 py-2 text-center text-sm capitalize bg-blue-600 text-white dark:text-white transition-colors duration-300 hover:bg-gray-100 hover:text-gray-700 lg:mt-0 lg:w-auto mr-4"
+            className="mt-4 block h-10 transform rounded-full border px-5 py-2 text-center text-sm capitalize bg-blue-600 text-white dark:text-white transition-colors duration-300 hover:bg-gray-100 hover:text-gray-900 lg:mt-0 lg:w-auto mr-4"
             href="/login"
           >
             Sign In
