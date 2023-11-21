@@ -47,7 +47,7 @@ export default function Home() {
                 <Image
                   src={bg}
                   alt=""
-                  className="lg:w-full absolute top-10 m-auto blur-[20px] lg:blur-[0] lg:relative z-0 mr-0"
+                  className="lg:w-full absolute top-10 m-auto blur-[20px] lg:blur-[0] lg:relative z-0 mr-0 drop-shadow-full"
                 />
               </div>
             </div>
