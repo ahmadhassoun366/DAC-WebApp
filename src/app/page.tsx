@@ -105,7 +105,7 @@ export default function Home() {
           <section id="faq" className="">
             <div className="space-y-10">
               <div className="flex flex-col justify-center items-center gap-4">
-                <h2 className="text-4xl font-extrabold text-gray-900 dark:text-white">
+                <h2 className="md:text-4xl font-extrabold text-gray-900 dark:text-white">
                   Designed for business teams like yours
                 </h2>
                 <p className="text-gray-500 sm:text-xl dark:text-gray-400 w-3/4">

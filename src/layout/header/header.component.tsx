@@ -86,7 +86,7 @@ export default function HeaderComponent() {
         <div
           className={`${isOpen ? "block" : "hidden"} w-full 
         
-        gap-24  px-6 py-4  transition-all duration-300 ease-in-out lg:relative lg:flex lg:w-auto lg:translate-x-0 lg:items-center lg:bg-transparent lg:p-0 lg:opacity-100`}
+        gap-64  px-6 py-4  transition-all duration-300 ease-in-out lg:relative lg:flex lg:w-auto lg:translate-x-0 lg:items-center lg:bg-transparent lg:p-0 lg:opacity-100`}
         >
           <div className="flex flex-col space-y-4 lg:space-y-0 lg:space-x-20 lg:flex-row">
             {navLinks.map((link) => (
@@ -99,8 +99,9 @@ export default function HeaderComponent() {
               </a>
             ))}
           </div>
+          <div className="flex gap-2">
           <Link
-            className="mt-4 block h-10 transform rounded-md border px-5 py-2 text-center text-sm capitalize text-agrey-900 dark:text-white transition-colors duration-300 hover:bg-gray-100 hover:text-gray-700 lg:mt-0 lg:w-auto mr-4"
+            className="mt-4 block h-10 transform rounded-full border px-5 py-2 text-center text-sm capitalize bg-blue-600 text-white dark:text-white transition-colors duration-300 hover:bg-gray-100 hover:text-gray-700 lg:mt-0 lg:w-auto mr-4"
             href="/login"
           >
             Sign In
@@ -124,6 +125,7 @@ export default function HeaderComponent() {
 							}`}
 						></i> */}
           </button>
+          </div>
         </div>
       </nav>
     </header>
