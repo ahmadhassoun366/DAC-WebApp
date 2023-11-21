@@ -86,19 +86,21 @@ export default function Home() {
                 </div>
               </div>
               <div className="mx-auto mt-20 w-full max-w-sm rounded-md border bg-transparent focus-within:border-gray-400 focus-within:ring focus-within:ring-gray-300 focus-within:ring-opacity-40 dark:border-gray-700 dark:focus-within:border-gray-300">
-                <form className="md:flex-row flex border border-black rounded-md">
+                <form className="md:flex-row flex border border-black rounded-md p-1">
+                  
                   <input
                     type="email"
                     placeholder="Enter your email address"
-                    className="m-1 h-10 flex-1 appearance-none border-none bg-transparent px-4 py-2 text-gray-700 placeholder-gray-400 focus:placeholder-transparent focus:outline-none focus:ring-0 dark:text-gray-200"
+                    className="m-auto h-10 flex-1 appearance-none border-none bg-transparent  text-gray-700 placeholder-gray-400 focus:placeholder-transparent focus:outline-none focus:ring-0 dark:text-gray-200"
                   />
 
                   <button
                     type="button"
-                    className="m-1 h-10 transform rounded-md bg-blue-500 px-4 py-2 text-white transition-colors duration-300 hover:bg-gray-500 focus:bg-gray-200 focus:outline-none"
+                    className=" m-auto transform rounded-md bg-blue-500 px-4 py-2 text-white transition-colors duration-300 hover:bg-gray-500 focus:bg-gray-200 focus:outline-none"
                   >
                     Join Us
                   </button>
+                 
                 </form>
               </div>
             </div>
