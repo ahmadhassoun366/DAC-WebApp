@@ -4,6 +4,7 @@ import { useState, useContext, SetStateAction } from "react";
 import Link from "next/link";
 import Image from "next/image";
 import imgLogin from "../../../../public/images/imgLogin.jpg";
+import ROUTES from "@/static/router.data";
 
 const Index = () => {
   const [email, setEmail] = useState("");
@@ -77,7 +78,7 @@ const Index = () => {
             <div className="">
               {" "}
               <Link
-                href="/signup"
+                href={ROUTES.signup}
                 className=" text-sm text-CustomColor1 rounded-md underline-offset-8 underline dark:text-blue-500 text-abrandc-dark-blackish"
               >
                 Don&apos;t have an account?
