@@ -1,6 +1,8 @@
 import React from "react";
 import Image from "next/image";
 import imgSignup from "../../../../public/images/imgSignUp.jpg";
+import Link from "next/link";
+import ROUTES from "@/static/router.data";
 
 const Index = () => {
   return (
@@ -9,49 +11,52 @@ const Index = () => {
         <div className="hidden lg:inline-flex w-1/2">
           <Image src={imgSignup} alt="" />
         </div>
-        <div className="lg:w-1/2 lg:pl-20 lg:pr-20  pt-5 pb-5 pl-5 pr-5 dark:text-white text-abrandc-dark-blackish">
+        <div className="lg:w-1/2 lg:px-10  p-5 dark:text-white text-abrandc-dark-blackish">
           <h1 className="text-center text-3xl font-semibold mb-5">Sign up</h1>
-          <form className="text-lg space-y-2">
-            <div className="">
-              <label htmlFor="firstName">First name</label>
-              <input
-                type="text"
-                placeholder="Enter your first name"
-                name="firstName"
-                required
-                className="w-full h-10 mb-2 px-3 rounded-md drop-shadow-sm bg-abrandc-light-grey dark:bg-gray-700  placeholder:text-sm"
-              />
+          <form className="text-lg space-y-2 ">
+            <div className="flex gap-4">
+              <div className="">
+                <label htmlFor="firstName">First name</label>
+                <input
+                  type="text"
+                  placeholder="Enter your first name"
+                  name="firstName"
+                  required
+                  className="w-full h-10 mb-2 px-3 rounded-md drop-shadow-sm bg-abrandc-light-grey dark:bg-gray-700  placeholder:text-sm"
+                />
+              </div>
+              <div className="">
+                <label htmlFor="lastName">last name</label>
+                <input
+                  type="text"
+                  placeholder="Last Name"
+                  name="lastName"
+                  required
+                  className="w-full h-10 mb-2  px-5 rounded-md drop-shadow-sm bg-abrandc-light-grey dark:bg-gray-700 placeholder:text-sm"
+                />
+              </div>
             </div>
-            <div className="">
-              {" "}
-              <label htmlFor="lastName">last name</label>
-              <input
-                type="text"
-                placeholder="Last Name"
-                name="lastName"
-                required
-                className="w-full h-10 mb-2  px-5 rounded-md drop-shadow-sm bg-abrandc-light-grey dark:bg-gray-700 placeholder:text-sm"
-              />
-            </div>
-            <div className="">
-              <label htmlFor="email">Email</label>
-              <input
-                type="email"
-                placeholder="Email"
-                name="email"
-                required
-                className="w-full h-10 mb-2  px-5 rounded-md drop-shadow-sm bg-abrandc-light-grey dark:bg-gray-700 placeholder:text-sm"
-              />
-            </div>
-            <div className="">
-              <label htmlFor="phone">Phone</label>
-              <input
-                type="phone"
-                placeholder="phone"
-                name="phone"
-                required
-                className="w-full h-10 mb-2  px-5 rounded-md drop-shadow-sm bg-abrandc-light-grey dark:bg-gray-700 placeholder:text-sm"
-              />
+            <div className="flex gap-4">
+              <div className="">
+                <label htmlFor="email">Email</label>
+                <input
+                  type="email"
+                  placeholder="Email"
+                  name="email"
+                  required
+                  className="w-full h-10 mb-2  px-5 rounded-md drop-shadow-sm bg-abrandc-light-grey dark:bg-gray-700 placeholder:text-sm"
+                />
+              </div>
+              <div className="">
+                <label htmlFor="phone">Phone</label>
+                <input
+                  type="phone"
+                  placeholder="phone"
+                  name="phone"
+                  required
+                  className="w-full h-10 mb-2  px-5 rounded-md drop-shadow-sm bg-abrandc-light-grey dark:bg-gray-700 placeholder:text-sm"
+                />
+              </div>
             </div>
             <div className="">
               <label htmlFor="password">Password</label>
@@ -73,6 +78,11 @@ const Index = () => {
                 className="w-full h-10 mb-2  px-5 rounded-md drop-shadow-sm bg-abrandc-light-grey dark:bg-gray-700 placeholder:text-sm"
               />
             </div>
+            <Link 
+            href={ROUTES.signin}
+            className="text-base text-blue-500 underline underline-offset-4">
+              Already Have an account?
+            </Link>
             <div className="text-center">
               <button
                 type="submit"

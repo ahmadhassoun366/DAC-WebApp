@@ -1,3 +1,4 @@
+"use client";
 import Image from "next/image";
 import HeaderComponent from "@/layout/header/header.component";
 import FooterComponent from "@/layout/footer/footer.component";
@@ -8,6 +9,7 @@ import { BiBlock } from "react-icons/bi";
 import { GoArrowRight } from "react-icons/go";
 import { FaLongArrowAltRight } from "react-icons/fa";
 import { plans, services } from "@/static/data";
+import ROUTES from "@/static/router.data";
 
 export default function Home() {
   return (
@@ -28,7 +30,7 @@ export default function Home() {
                   Management
                 </p>
                 <Link
-                  href="#"
+                  href={ROUTES.signin}
                   className="inline-flex items-center justify-center px-5 py-3 mr-3 text-base font-medium text-center text-white rounded-lg bg-blue-500 focus:ring-1 focus:ring-gray-300 hover:bg-blue-700"
                 >
                   Get started
@@ -116,7 +118,10 @@ export default function Home() {
               </div>
               <div className="space-y-8 md:grid md:grid-cols-2 lg:grid-cols-3 md:gap-12 md:space-y-0">
                 {services.map((service, index) => (
-                  <div key={index} className="dark:bg-abrandc-dark-grey bg-abrandc-light-grey rounded-xl p-4">
+                  <div
+                    key={index}
+                    className="dark:bg-abrandc-dark-grey bg-abrandc-light-grey rounded-xl p-4"
+                  >
                     <div className="flex justify-center items-center mb-4 w-10 h-10 rounded-full bg-blue-100 lg:h-12 lg:w-12 dark:bg-blue-900">
                       <service.icon className="w-5 h-5 text-blue-600 lg:w-6 lg:h-6 dark:text-blue-300" />
                     </div>
