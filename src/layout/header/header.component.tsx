@@ -59,13 +59,17 @@ export default function HeaderComponent() {
     { label: "Pricing", path: "#pricing" },
     { label: "Contact", path: "#contact" },
     { label: "FAQ", path: "#faq" },
+    
   ];
 
   return (
     <header className="dark:bg-abrandc-dark-blackish bg-white shadow fixed w-full z-50">
       <nav className="container-2 mx-auto px-6 py-4 sm:py-5 lg:flex lg:items-center lg:justify-between">
-        <div className="flex items-center justify-between">
-          <Link className="text-2xl font-bold dark:text-white lg:text-3xl" href="/">
+        <div className="flex items-center justify-between ">
+          <Link
+            className="text-2xl font-bold dark:text-white lg:text-3xl"
+            href="/"
+          >
             DAC
           </Link>
           <div className="flex lg:hidden">
@@ -100,31 +104,31 @@ export default function HeaderComponent() {
             ))}
           </div>
           <div className="flex gap-2">
-          <Link
-            className="mt-4 block h-10 transform rounded-full border px-5 py-2 text-center text-sm capitalize bg-blue-600 text-white dark:text-white transition-colors duration-300 hover:bg-gray-100 hover:text-gray-900 lg:mt-0 lg:w-auto mr-4"
-            href="/login"
-          >
-            Sign In
-          </Link>
-          <button
-            className="theme_btn text-agrey-500 dark:text-white"
-            onClick={toggleTheme}
-          >
-            {currentTheme === "light" ? (
-              <div className="select-none">
-                <i className="fa-lf fas fa-moon" />
-              </div>
-            ) : (
-              <div className="dark:text-white">
-                <FiSun />
-              </div>
-            )}
-            {/* <i
+            <Link
+              className="mt-4 block h-10 transform rounded-full border px-5 py-2 text-center text-sm capitalize bg-blue-600 text-white dark:text-white transition-colors duration-300 hover:bg-gray-100 hover:text-gray-700 lg:mt-0 lg:w-auto mr-4"
+              href="/login"
+            >
+              Sign In
+            </Link>
+            <button
+              className="theme_btn text-agrey-500 dark:text-white"
+              onClick={toggleTheme}
+            >
+              {currentTheme === "light" ? (
+                <div className="select-none">
+                  <i className="fa-lf fas fa-moon" />
+                </div>
+              ) : (
+                <div className="dark:text-white">
+                  <FiSun />
+                </div>
+              )}
+              {/* <i
 							className={`fa-lg fas ${
 								currentTheme === 'light' ? 'fa-sun' : 'fa-moon'
 							}`}
 						></i> */}
-          </button>
+            </button>
           </div>
         </div>
       </nav>
