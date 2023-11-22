@@ -1,9 +1,8 @@
 const ROUTES = {
-	root: '/',
-
-	external: {
-		wallet: 'https://chrome.google.com/webstore/category/extensions',
-	},
+  root: "/",
+  signin: "/signin",
+  signup: "/signup",
+  dashboard: "/dashboard",
 };
 
 export default ROUTES;

@@ -105,7 +105,90 @@ export default function HeaderComponent() {
           </div>
           <div className="flex gap-2">
             <Link
-              className="mt-4 block h-10 transform rounded-full border px-5 py-2 text-center text-sm capitalize bg-blue-600 text-white dark:text-white transition-colors duration-300 hover:bg-gray-100 hover:text-gray-700 lg:mt-0 lg:w-auto mr-4"
+              className="mt-4 block h-10 transform rounded-full border px-5 py-2 text-center text-sm capitalize bg-blue-600 text-white dark:text-white transition-colors duration-300 hover:bg-gray-100 hover:text-gray-900 lg:mt-0 lg:w-auto mr-4"
+              href="/login"
+            >
+              Sign In
+            </Link>
+
+            <button
+              className="theme_btn text-agrey-500 dark:text-white"
+              onClick={toggleTheme}
+            >
+              {currentTheme === "light" ? (
+                <div className="select-none">
+                  <i className="fa-lf fas fa-moon" />
+                </div>
+              ) : (
+                <div className="dark:text-white">
+                  <FiSun />
+                </div>
+              )}
+              {/* <i
+							className={`fa-lg fas ${
+								currentTheme === 'light' ? 'fa-sun' : 'fa-moon'
+							}`}
+						></i> */}
+            </button>
+          </div>
+        </div>
+      </nav>
+
+
+
+
+
+
+
+
+
+
+
+      <nav className="p-3">
+
+        {/* For phones screen */}
+
+
+        {/* For large screen */}
+        <div className=" container-2 m-auto flex items-center justify-between">
+          <div className="flex items-center justify-between">
+            <Link className="text-2xl font-bold dark:text-white lg:text-3xl" href="/">
+              DAC
+            </Link>
+
+            <div className="flex lg:hidden">
+              <button
+                type="button"
+                className="dark:text-gray-200 hover:text-gray-200 focus:text-gray-600 focus:outline-none"
+                aria-label="toggle menu"
+                onClick={toggleMenu}
+              >
+                {isOpen ? (
+                  <FaTimes className="h-6 w-6" />
+                ) : (
+                  <FaBars className="h-6 w-6" />
+                )}
+              </button>
+            </div>
+          </div>
+
+
+          <div className="flex flex-col space-y-4 lg:space-y-0 lg:space-x-20 lg:flex-row">
+            {navLinks.map((link) => (
+              <a
+                key={link.path}
+                className="text-agrey-900 dark:text-white hover:text-blue-500 lg:mx-6"
+                href={link.path}
+              >
+                {link.label}
+              </a>
+            ))}
+          </div>
+
+
+          <div className="flex gap-4 text-center">
+            <Link
+              className="block h-10 transform rounded-full border px-5 py-2 text-center text-sm capitalize bg-blue-600 text-white dark:text-white transition-colors duration-300 hover:bg-gray-100 hover:text-gray-900"
               href="/login"
             >
               Sign In
@@ -131,7 +214,10 @@ export default function HeaderComponent() {
             </button>
           </div>
         </div>
+
       </nav>
+
+
     </header>
   );
 }
