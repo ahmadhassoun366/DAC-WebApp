@@ -1,3 +1,4 @@
+"use client";
 import Image from "next/image";
 import HeaderComponent from "@/layout/header/header.component";
 import FooterComponent from "@/layout/footer/footer.component";
@@ -8,6 +9,7 @@ import { BiBlock } from "react-icons/bi";
 import { GoArrowRight } from "react-icons/go";
 import { FaLongArrowAltRight } from "react-icons/fa";
 import { plans, services } from "@/static/data";
+import ROUTES from "@/static/router.data";
 
 export default function Home() {
   return (
@@ -28,8 +30,13 @@ export default function Home() {
                   Management
                 </p>
                 <Link
+<<<<<<< HEAD
                   href="#"
                   className="inline-flex items-center justify-center px-5 py-3 mr-3 text-base font-medium text-center text-white rounded-lg bg-blue-500 focus:ring-1 focus:ring-gray-300 hover:bg-blue-700 hover:shadow-lg hover:shadow-blue-500/50"
+=======
+                  href={ROUTES.signin}
+                  className="inline-flex items-center justify-center px-5 py-3 mr-3 text-base font-medium text-center text-white rounded-lg bg-blue-500 focus:ring-1 focus:ring-gray-300 hover:bg-blue-700"
+>>>>>>> 375f27ffc1d69a2143b9bb45035a0abd58f40607
                 >
                   Get started
                   <GoArrowRight className="mx-1" size={25} />
@@ -45,7 +52,11 @@ export default function Home() {
                 <Image
                   src={bg}
                   alt=""
+<<<<<<< HEAD
                   className="lg:w-full absolute top-10 m-auto blur-[20px] lg:blur-[0] lg:relative z-0 mr-0 lg:drop-shadow-2xl"
+=======
+                  className="lg:w-full absolute top-10 m-auto blur-[20px] lg:blur-[0] lg:relative z-0 mr-0 drop-shadow-full"
+>>>>>>> 375f27ffc1d69a2143b9bb45035a0abd58f40607
                 />
               </div>
             </div>
@@ -84,19 +95,21 @@ export default function Home() {
                 </div>
               </div>
               <div className="mx-auto mt-20 w-full max-w-sm rounded-md border bg-transparent focus-within:border-gray-400 focus-within:ring focus-within:ring-gray-300 focus-within:ring-opacity-40 dark:border-gray-700 dark:focus-within:border-gray-300">
-                <form className="md:flex-row flex border border-black rounded-md">
+                <form className="md:flex-row flex border border-black rounded-md p-1">
+                  
                   <input
                     type="email"
                     placeholder="Enter your email address"
-                    className="m-1 h-10 flex-1 appearance-none border-none bg-transparent px-4 py-2 text-gray-700 placeholder-gray-400 focus:placeholder-transparent focus:outline-none focus:ring-0 dark:text-gray-200"
+                    className="m-auto h-10 flex-1 appearance-none border-none bg-transparent  text-gray-700 placeholder-gray-400 focus:placeholder-transparent focus:outline-none focus:ring-0 dark:text-gray-200"
                   />
 
                   <button
                     type="button"
-                    className="m-1 h-10 transform rounded-md bg-blue-500 px-4 py-2 text-white transition-colors duration-300 hover:bg-gray-500 focus:bg-gray-200 focus:outline-none"
+                    className=" m-auto transform rounded-md bg-blue-500 px-4 py-2 text-white transition-colors duration-300 hover:bg-gray-500 focus:bg-gray-200 focus:outline-none"
                   >
                     Join Us
                   </button>
+                 
                 </form>
               </div>
             </div>
@@ -105,7 +118,7 @@ export default function Home() {
           <section id="faq" className="pb-20 border-b-2">
             <div className="space-y-10">
               <div className="flex flex-col justify-center items-center gap-4">
-                <h2 className="text-4xl font-extrabold text-gray-900 dark:text-white">
+                <h2 className="md:text-4xl font-extrabold text-gray-900 dark:text-white">
                   Designed for business teams like yours
                 </h2>
                 <p className="text-gray-500 sm:text-xl dark:text-gray-400 w-3/4">
@@ -116,7 +129,10 @@ export default function Home() {
               </div>
               <div className="space-y-8 md:grid md:grid-cols-2 lg:grid-cols-3 md:gap-12 md:space-y-0">
                 {services.map((service, index) => (
-                  <div key={index} className="dark:bg-abrandc-dark-grey bg-abrandc-light-grey rounded-xl p-4">
+                  <div
+                    key={index}
+                    className="dark:bg-abrandc-dark-grey bg-abrandc-light-grey rounded-xl p-4"
+                  >
                     <div className="flex justify-center items-center mb-4 w-10 h-10 rounded-full bg-blue-100 lg:h-12 lg:w-12 dark:bg-blue-900">
                       <service.icon className="w-5 h-5 text-blue-600 lg:w-6 lg:h-6 dark:text-blue-300" />
                     </div>
