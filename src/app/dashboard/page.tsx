@@ -1,13 +1,18 @@
 import FooterComponent from "./layout/footer.component";
 import NavbarComponent from "./layout/navbar.component";
 import SidebarComponent from "./layout/sidebar.component";
+import { ReactNode } from "react";
 
-const Layout = ({ children }) => {
+interface LayoutProps {
+  children: ReactNode;
+}
+
+const Layout = ({ children }: LayoutProps) => {
   return (
     <div className="flex min-h-screen">
       <SidebarComponent />
       <div className="content flex-1  dark:bg-abrandc-dark-blackish bg-white">
-        <NavbarComponent/>
+        <NavbarComponent />
         {children}
         <FooterComponent />
       </div>
