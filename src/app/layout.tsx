@@ -30,7 +30,7 @@ export default function RootLayout({
         <ContextComponent>
           <AppInit>
             {children}
-            <Toaster position="top-right" />
+            <Toaster position="top-center" />
           </AppInit>
         </ContextComponent>
       </body>
