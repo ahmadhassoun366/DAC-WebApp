@@ -6,8 +6,6 @@ import Image from "next/image";
 import imgLogin from "../../../../public/images/imgLogin.jpg";
 import ROUTES from "@/static/router.data";
 import AuthContext from "@/shared/services/auth/auth.context";
-import { User } from "@/shared/services/auth/auth.types";
-import { fetchUserData } from "@/shared/services/user/user.service";
 import { useRouter } from "next/navigation";
 import toast from "react-hot-toast";
 
