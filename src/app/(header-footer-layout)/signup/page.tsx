@@ -73,7 +73,7 @@ const Index = () => {
   return (
     <div className="h-full p-8 flex items-center justify-center">
       <div className="flex gap-1 w-5/6 h-5/6 drop-shadow-lg bg-abrandc-light-grey dark:bg-abrandc-dark-grey ">
-        <div className="hidden lg:inline-flex w-1/2">
+        <div className="hidden lg:inline-flex w-1/2 bg-abrandc-light-grey dark:bg-abrandc-dark-grey">
           <Image src={imgSignUp} alt="" />
         </div>
         <div className="lg:w-1/2 lg:px-10  p-5 dark:text-white text-abrandc-dark-blackish">
