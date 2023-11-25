@@ -1,7 +1,7 @@
 "use client";
 import React from "react";
 import Image from "next/image";
-import imgSignup from "../../../../public/images/imgSignUp.jpg";
+import imgSignUp from "../../../../public/images/imgSignUp.png";
 import Link from "next/link";
 import ROUTES from "@/static/router.data";
 import AuthContext from "@/shared/services/auth/auth.context";
@@ -74,7 +74,7 @@ const Index = () => {
     <div className="h-full p-8 flex items-center justify-center">
       <div className="flex gap-1 w-5/6 h-5/6 drop-shadow-lg bg-abrandc-light-grey dark:bg-abrandc-dark-grey ">
         <div className="hidden lg:inline-flex w-1/2">
-          <Image src={imgSignup} alt="" />
+          <Image src={imgSignUp} alt="" />
         </div>
         <div className="lg:w-1/2 lg:px-10  p-5 dark:text-white text-abrandc-dark-blackish">
           <h1 className="text-center text-3xl font-semibold mb-5">Sign up</h1>
