@@ -4,10 +4,12 @@ import { useState, useContext, useEffect } from "react";
 import Link from "next/link";
 import Image from "next/image";
 import imgLogin from "../../../../public/images/imgLogin.jpg";
+import imgLoginDark from "../../../../public/images/imgLoginDark.png";
 import ROUTES from "@/static/router.data";
 import AuthContext from "@/shared/services/auth/auth.context";
 import { useRouter } from "next/navigation";
 import toast from "react-hot-toast";
+import  ThemeSvcContext from "@/shared/services/theme/theme.context";
 
 const Index = () => {
   const router = useRouter();
@@ -23,6 +25,7 @@ const Index = () => {
     setPassword(e.target.value);
   };
   const authService = useContext(AuthContext);
+ 
 
   const handleLogin = async (e: React.FormEvent<HTMLFormElement>) => {
     e.preventDefault();
@@ -37,12 +40,13 @@ const Index = () => {
       },
     });
   };
-
+  const { theme } = useContext(ThemeSvcContext); 
+  
   return (
     <div className="h-full p-8 flex items-center justify-center ">
       <div className="flex gap-1 w-5/6 h-5/6 drop-shadow-lg rounded bg-abrandc-light-grey dark:bg-abrandc-dark-grey">
         <div className="hidden lg:inline-flex w-1/2">
-          <Image src={imgLogin} alt="" />
+          <Image src={theme == 'dark' ? imgLoginDark : imgLogin} alt="" />
         </div>
         <div className="lg:w-1/2 lg:pl-20 lg:pr-20  pt-5 pb-5 pl-5 pr-5 flex items-center flex-col justify-center">
           <h1 className="text-center text-3xl font-semibold mb-8 dark:text-white text-abrandc-dark-blackish">
