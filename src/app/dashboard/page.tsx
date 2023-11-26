@@ -1,42 +1,4 @@
-"use client";
-import React, { useState, useEffect } from "react";
-import FooterComponent from "./layout/footer.component";
-import SidebarComponent from "./layout/sidebar.component";
-import { PropsWithChildren } from "react";
-
-const Spinner = () => {
-  return (
-    <div className="flex-1 flex items-center justify-center dark:bg-abrandc-dark-blackish bg-white bg-opacity-75 z-50">
-      <div className="animate-spin rounded-full h-32 w-32 border-b-2 border-gray-900"></div>
-    </div>
-  );
-};
-
-const Layout = (props: PropsWithChildren) => {
-  const [isChildrenLoading, setChildrenLoading] = useState(true);
-
-  useEffect(() => {
-    const timer = setTimeout(() => {
-      setChildrenLoading(false);
-    }, 1000);
-
-    return () => clearTimeout(timer);
-  }, []);
-
-  return (
-    <div className="flex min-h-screen">
-      <SidebarComponent />
-      <div className="flex-1 dark:bg-abrandc-dark-blackish bg-white flex flex-col">
-        {/* Spinner and Children */}
-        {isChildrenLoading ? (
-          <Spinner />
-        ) : (
-          <div className="flex-1">{props.children}</div>
-        )}
-        <FooterComponent />
-      </div>
-    </div>
-  );
-};
-
-export default Layout;
+// `app/dashboard/page.tsx` is the UI for the `/dashboard` URL
+export default function Page() {
+  return <h1>Hello, Dashboard Page!</h1>
+}
