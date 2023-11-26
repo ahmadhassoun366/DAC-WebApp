@@ -33,7 +33,7 @@ export default function Stocks() {
             <tr>
               <td className="text-center p-3">
                 <div className="flex lg:flex-row border-2 rounded p-2 hover:drop-shadow flex-col">
-                  <div className="m-auto w-2/6">
+                  <div className="m-auto lg:w-2/6">
                     <div className="flex justify-center"><RiStore3Fill size={50} /></div>
                     <p className="text-xs text-center font-bold">Ahmad Store</p>
                   </div>
@@ -45,7 +45,7 @@ export default function Stocks() {
               </td>
               <td className="text-center p-3">
                 <div className="flex lg:flex-row border-2 rounded p-2 hover:drop-shadow flex-col">
-                  <div className="m-auto w-2/6">
+                  <div className="m-auto lg:w-2/6">
                     <div className="flex justify-center"><MdStorefront size={50} /></div>
                     <p className="text-xs font-bold">SHOP</p>
                   </div>
@@ -57,7 +57,7 @@ export default function Stocks() {
               </td>
               <td className="text-center p-3">
                 <div className="flex lg:flex-row border-2 rounded p-2 hover:drop-shadow flex-col">
-                  <div className="m-auto w-2/6">
+                  <div className="m-auto lg:w-2/6">
                     <div className="flex justify-center"><GrDeliver size={50} /></div>
                     <p className="text-xs font-bold">VEHICLE</p>
                   </div>
@@ -71,7 +71,7 @@ export default function Stocks() {
             <tr>
               <td className="text-center p-3">
                 <div className="flex lg:flex-row border-2 rounded p-2 hover:drop-shadow flex-col">
-                  <div className="m-auto w-2/6">
+                  <div className="m-auto lg:w-2/6">
                     <div className="flex justify-center"><RiStore3Fill size={50} /></div>
                     <p className="text-xs text-center font-bold">yousef Store</p>
                   </div>
@@ -83,7 +83,7 @@ export default function Stocks() {
               </td>
               <td className="text-center p-3">
                 <div className="flex lg:flex-row border-2 rounded p-2 hover:drop-shadow flex-col">
-                  <div className="m-auto w-2/6">
+                  <div className="m-auto lg:w-2/6">
                     <div className="flex justify-center"><MdStorefront size={50} /></div>
                     <p className="text-xs font-bold">SHOP</p>
                   </div>
@@ -95,7 +95,7 @@ export default function Stocks() {
               </td>
               <td className="text-center p-3">
                 <div className="flex lg:flex-row border-2 rounded p-2 hover:drop-shadow flex-col">
-                  <div className="m-auto w-2/6">
+                  <div className="m-auto lg:w-2/6">
                     <div className="flex justify-center"><GrDeliver size={50} /></div>
                     <p className="text-xs font-bold">VEHICLE</p>
                   </div>
