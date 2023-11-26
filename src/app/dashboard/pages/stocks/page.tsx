@@ -21,23 +21,23 @@ export default function Stocks() {
         </div>
       </div>
       <div className="px-5">
-        <table className="table-fixed w-full">
+        <table className="table-fixed w-full divide-y divide-gray-200">
           <thead className="bg-abrandc-light-grey">
             <tr>
-              <th className="py-2">Store</th>
-              <th className="py-2">Shope</th>
-              <th className="py-2">Vehicle</th>
+              <th className="py-2">STORE</th>
+              <th className="py-2">SHOP</th>
+              <th className="py-2">VEHICLE</th>
             </tr>
           </thead>
           <tbody>
             <tr>
               <td className="text-center p-3">
                 <div className="flex lg:flex-row border-2 rounded p-2 hover:drop-shadow flex-col">
-                  <div className="m-auto">
-                    <RiStore3Fill size={50} />
-                    <p className="text-xs font-bold">STORE</p>
+                  <div className="m-auto w-2/6">
+                    <div className="flex justify-center"><RiStore3Fill size={50} /></div>
+                    <p className="text-xs text-center font-bold">Ahmad Store</p>
                   </div>
-                  <div className="w-5/6 items-center flex flex-col justify-center m-auto">
+                  <div className="w-4/6 items-center flex flex-col justify-center m-auto">
                     <h1>Inventory: 123445</h1>
                     <h1>Assets: 43242</h1>
                   </div>
@@ -45,11 +45,11 @@ export default function Stocks() {
               </td>
               <td className="text-center p-3">
                 <div className="flex lg:flex-row border-2 rounded p-2 hover:drop-shadow flex-col">
-                  <div className="m-auto">
-                    <MdStorefront size={50} />
+                  <div className="m-auto w-2/6">
+                    <div className="flex justify-center"><MdStorefront size={50} /></div>
                     <p className="text-xs font-bold">SHOP</p>
                   </div>
-                  <div className="w-5/6 items-center flex flex-col justify-center m-auto">
+                  <div className="w-4/6 items-center flex flex-col justify-center m-auto">
                     <h1>Inventory: 123445</h1>
                     <h1>Assets: 43242</h1>
                   </div>
@@ -57,11 +57,49 @@ export default function Stocks() {
               </td>
               <td className="text-center p-3">
                 <div className="flex lg:flex-row border-2 rounded p-2 hover:drop-shadow flex-col">
-                  <div className="m-auto">
-                    <GrDeliver size={50} />
+                  <div className="m-auto w-2/6">
+                    <div className="flex justify-center"><GrDeliver size={50} /></div>
                     <p className="text-xs font-bold">VEHICLE</p>
                   </div>
-                  <div className="w-5/6 items-center flex flex-col justify-center m-auto">
+                  <div className="w-4/6 items-center flex flex-col justify-center m-auto">
+                    <h1>Inventory: 123445</h1>
+                    <h1>Assets: 43242</h1>
+                  </div>
+                </div>
+              </td>
+            </tr>
+            <tr>
+              <td className="text-center p-3">
+                <div className="flex lg:flex-row border-2 rounded p-2 hover:drop-shadow flex-col">
+                  <div className="m-auto w-2/6">
+                    <div className="flex justify-center"><RiStore3Fill size={50} /></div>
+                    <p className="text-xs text-center font-bold">yousef Store</p>
+                  </div>
+                  <div className="w-4/6 items-center flex flex-col justify-center m-auto">
+                    <h1>Inventory: 123445</h1>
+                    <h1>Assets: 43242</h1>
+                  </div>
+                </div>
+              </td>
+              <td className="text-center p-3">
+                <div className="flex lg:flex-row border-2 rounded p-2 hover:drop-shadow flex-col">
+                  <div className="m-auto w-2/6">
+                    <div className="flex justify-center"><MdStorefront size={50} /></div>
+                    <p className="text-xs font-bold">SHOP</p>
+                  </div>
+                  <div className="w-4/6 items-center flex flex-col justify-center m-auto">
+                    <h1>Inventory: 123445</h1>
+                    <h1>Assets: 43242</h1>
+                  </div>
+                </div>
+              </td>
+              <td className="text-center p-3">
+                <div className="flex lg:flex-row border-2 rounded p-2 hover:drop-shadow flex-col">
+                  <div className="m-auto w-2/6">
+                    <div className="flex justify-center"><GrDeliver size={50} /></div>
+                    <p className="text-xs font-bold">VEHICLE</p>
+                  </div>
+                  <div className="w-4/6 items-center flex flex-col justify-center m-auto">
                     <h1>Inventory: 123445</h1>
                     <h1>Assets: 43242</h1>
                   </div>
