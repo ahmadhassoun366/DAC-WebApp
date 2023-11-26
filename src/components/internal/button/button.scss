@@ -1,77 +1,88 @@
 .comp_button {
-	@apply relative;
+  @apply relative;
 
-	@apply px-6;
-	@apply py-2;
+  @apply px-6;
+  @apply py-2;
 
-	@apply h-[48px];
+  @apply h-[48px];
 
-	@apply overflow-hidden;
+  @apply overflow-hidden;
 
-	@apply rounded-full;
+  @apply rounded-full;
 
-	@apply text-sm;
-	@apply text-center;
+  @apply text-sm;
+  @apply text-center;
 
-	// @apply transition-all;
-	// @apply duration-200;
-	// @apply ease-in-out;
+  // @apply transition-all;
+  // @apply duration-200;
+  // @apply ease-in-out;
 
-	@apply disabled:text-ghostly_grey-300;
-	@apply disabled:bg-ghostly_grey-300;
+  @apply disabled:text-ghostly_grey-300;
+  @apply disabled:bg-ghostly_grey-300;
 
-	@apply disabled:border-transparent;
-	@apply disabled:cursor-not-allowed;
+  @apply disabled:border-transparent;
+  @apply disabled:cursor-not-allowed;
 
-	@apply disabled:hover:border-transparent;
-	@apply disabled:hover:cursor-not-allowed;
+  @apply disabled:hover:border-transparent;
+  @apply disabled:hover:cursor-not-allowed;
 
-	.click_overlay {
-		@apply absolute;
+  .click_overlay {
+    @apply absolute;
 
-		border-radius: 50%;
-		transform: scale(0);
-		animation: ripple 500ms linear;
+    border-radius: 50%;
+    transform: scale(0);
+    animation: ripple 500ms linear;
 
-		@apply bg-white;
-		@apply bg-opacity-70;
+    @apply bg-white;
+    @apply bg-opacity-70;
 
-		@apply pointer-events-none;
-	}
+    @apply pointer-events-none;
+  }
 
-	&.blue {
-		@apply bg-ablue-500;
-		@apply text-white;
+  &.blue {
+    @apply bg-ablue-500;
+    @apply text-white;
 
-		@apply hover:bg-ablue-400;
-	}
+    @apply hover:bg-ablue-400;
+  }
+  &.red {
+    @apply bg-ared-500;
+    @apply text-white;
 
-	&.secondary {
-		@apply bg-ghostly_grey-50;
+    @apply hover:bg-ared-400;
+  }
+  &.green {
+    @apply bg-green-500;
+    @apply text-white;
 
-		@apply border;
-		@apply border-ghostly_grey-50;
+    @apply hover:bg-green-400;
+  }
+  &.secondary {
+    @apply bg-ghostly_grey-50;
 
-		@apply text-black;
+    @apply border;
+    @apply border-ghostly_grey-50;
 
-		@apply hover:bg-ghostly_grey-100;
-		@apply hover:border-ghostly_grey-100;
+    @apply text-black;
 
-		@apply active:bg-ghostly_grey-200;
-		@apply active:border-ghostly_grey-200;
-	}
+    @apply hover:bg-ghostly_grey-100;
+    @apply hover:border-ghostly_grey-100;
 
-	&.medium {
-		@apply py-2;
-		@apply px-4;
+    @apply active:bg-ghostly_grey-200;
+    @apply active:border-ghostly_grey-200;
+  }
 
-		@apply h-[36px];
-	}
+  &.medium {
+    @apply py-2;
+    @apply px-4;
+
+    @apply h-[36px];
+  }
 }
 
 @keyframes ripple {
-	to {
-		transform: scale(4);
-		opacity: 0;
-	}
+  to {
+    transform: scale(4);
+    opacity: 0;
+  }
 }
