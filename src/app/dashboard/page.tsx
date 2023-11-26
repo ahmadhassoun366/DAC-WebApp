@@ -3,6 +3,7 @@ import React, { useState, useEffect } from "react";
 import FooterComponent from "./layout/footer.component";
 import NavbarComponent from "./layout/navbar.component";
 import SidebarComponent from "./layout/sidebar.component";
+import { PropsWithChildren } from "react";
 
 const Spinner = () => {
   return (
@@ -12,7 +13,7 @@ const Spinner = () => {
   );
 };
 
-const Layout = ({ children }) => {
+const Layout = (props: PropsWithChildren) => {
   const [isChildrenLoading, setChildrenLoading] = useState(true);
 
   useEffect(() => {
@@ -28,7 +29,7 @@ const Layout = ({ children }) => {
       <SidebarComponent />
       <div className="content flex-1  dark:bg-abrandc-dark-blackish bg-white">
         <NavbarComponent />
-        {isChildrenLoading ? <Spinner /> : <>{children}</>}
+        {isChildrenLoading ? <Spinner /> : <> {props.children}</>}
         <FooterComponent />
       </div>
     </div>
