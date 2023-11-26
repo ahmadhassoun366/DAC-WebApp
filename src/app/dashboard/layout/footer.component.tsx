@@ -38,7 +38,7 @@ export default function FooterComponent() {
     },
   ];
   return (
-    <div className="flex justify-between items-center h-16 bg-white dark:bg-abrandc-dark-grey text-black dark:text-white">
+    <div className="flex justify-between items-center p-3 bg-white dark:bg-abrandc-dark-grey text-black dark:text-white">
       <div className="flex justify-center items-center">
         {Links.map(({ name }) => (
           <a
