@@ -33,7 +33,7 @@ export default function Stocks() {
         </table>
         <div className="grid grid-cols-1 md:grid-cols-3 gap-4 pt-4">
           {/* Column for Stock Items */}
-          <div className="md:col-span-1">
+          <div className="md:col-span-1 space-y-4">
             <Card
               title="Stock Item A"
               inventory="150 Units"
@@ -67,7 +67,7 @@ export default function Stocks() {
           </div>
 
           {/* Column for Vehicle Items */}
-          <div className="md:col-span-1">
+          <div className="md:col-span-1 space-y-4">
             <Card
               title="Vehicle Item C"
               inventory="10 Vehicles"
