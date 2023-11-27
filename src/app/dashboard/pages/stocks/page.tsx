@@ -7,8 +7,8 @@ import { CiDeliveryTruck } from "react-icons/ci";
 export default function Stocks() {
   return (
     <section className="">
-      <div className=" py-1 flex  items-center justify-between  w-full">
-        <h2 className="text-3xl font-semibold text-gray-900 dark:text-white">
+      <div className="flex items-center justify-between w-full">
+        <h2 className="text-xl font-semibold text-gray-900 dark:text-white">
           Stocks
         </h2>
         <h4 className="text-xl text-gray-500">2023</h4>
@@ -20,8 +20,8 @@ export default function Stocks() {
         </div>
         <div className="flex gap-2 mb-2 lg:mb-0">
           <Button className="blue">Create Store</Button>
-          <Button className="secondary">Create Shope</Button>
-          <Button className="secondary">Create Vehicle</Button>
+          <Button className="red">Create Shope</Button>
+          <Button className="green">Create Vehicle</Button>
         </div>
       </div>
       <div className="">
