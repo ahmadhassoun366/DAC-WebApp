@@ -3,7 +3,7 @@ import Card from "@/components/internal/card/card.component";
 import Link from "next/link";
 export default function Stocks() {
   return (
-    <section className="container mx-auto px-4">
+    <section className="">
       <div className="py-4 flex items-center justify-between w-full">
         <h2 className="text-3xl font-semibold text-gray-900 dark:text-white">
           Stocks
@@ -40,6 +40,18 @@ export default function Stocks() {
               assets="$10,000"
               type="stock"
             />
+            <Card
+              title="Stock Item A"
+              inventory="150 Units"
+              assets="$10,000"
+              type="stock"
+            />
+            <Card
+              title="Stock Item A"
+              inventory="150 Units"
+              assets="$10,000"
+              type="stock"
+            />
             {/* Add more Stock Cards here */}
           </div>
 
@@ -68,6 +80,18 @@ export default function Stocks() {
 
           {/* Column for Vehicle Items */}
           <div className="md:col-span-1 space-y-4">
+            <Card
+              title="Vehicle Item C"
+              inventory="10 Vehicles"
+              assets="$50,000"
+              type="vehicle"
+            />
+            <Card
+              title="Vehicle Item C"
+              inventory="10 Vehicles"
+              assets="$50,000"
+              type="vehicle"
+            />
             <Card
               title="Vehicle Item C"
               inventory="10 Vehicles"

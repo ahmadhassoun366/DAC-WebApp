@@ -38,25 +38,25 @@ export default function FooterComponent() {
     },
   ];
   return (
-    <div className="flex justify-between items-center p-3 bg-white dark:bg-abrandc-dark-grey text-black dark:text-white">
+    <div className="flex justify-between items-center   text-gray-700 dark:text-white">
       <div className="flex justify-center items-center">
         {Links.map(({ name }) => (
           <a
             key={name}
             href="#"
-            className="text-sm font-bold mx-2 hover:text-blue-500"
+            className="text-sm font-bold mx-2 text-gray-700 dark:text-gray-500 hover:text-blue-700 dark:hover:text-blue-700"
           >
             {name}
           </a>
         ))}
       </div>
       {/* social media icons */}
-      <div className="flex justify-center items-center">
+      <div className="flex justify-center items-center ">
         {social.map(({ name, url, icon: Icon }) => (
           <a
             key={name}
             href={url}
-            className="text-2xl font-bold mx-2 hover:text-blue-500"
+            className="text-2xl font-bold mx-2 text-gray-700 dark:text-gray-500 hover:text-blue-700 dark:hover:text-blue-700"
           >
             <Icon />
           </a>
