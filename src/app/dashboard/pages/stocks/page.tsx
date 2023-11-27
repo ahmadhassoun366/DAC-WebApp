@@ -1,105 +1,82 @@
 import Button from "@/components/internal/button/button.component";
 import Card from "@/components/internal/card/card.component";
-import Link from "next/link";
+import { MdOutlineShoppingCart } from "react-icons/md";
+import { IoStorefrontOutline } from "react-icons/io5";
+import { CiDeliveryTruck } from "react-icons/ci";
+
 export default function Stocks() {
   return (
-    <section className="">
-      <div className="py-4 flex items-center justify-between w-full">
+    <section className=" ">
+      <div className="py-4 flex items-center justify-between w-full border-b border-gray-200 dark:border-gray-700">
         <h2 className="text-3xl font-semibold text-gray-900 dark:text-white">
           Stocks
         </h2>
         <h4 className="text-xl text-gray-500">2023</h4>
       </div>
-      <div className="flex lg:justify-between lg:flex-row flex-col lg:items-end lg:pt-5 lg:pb-2 items-center gap-3 justify-center">
-        <div className="lg:text-start text-center">
-          <h4>Available total amount of inventory: $1500</h4>
-          <h4 className="text-blue-500">Beginning inventory: $1500</h4>
+      <div className="flex flex-col lg:flex-row justify-between items-center gap-3 p-5">
+        <div className="text-center lg:text-left">
+          <h4 className="text-lg font-medium">
+            Available total amount of inventory: $1500
+          </h4>
+          <h4 className="text-lg text-blue-500 font-medium">
+            Beginning inventory: $1500
+          </h4>
         </div>
-        <div className="flex gap-2 mb-2 lg:mb-0">
-          <Button className="blue">Create Store</Button>
-          <Button className="secondary">Create Shop</Button>
-          <Button className="secondary">Create Vehicle</Button>
+        <div className="flex gap-2">
+          <Button className="bg-blue-500 text-white px-4 py-2 rounded shadow hover:bg-blue-600">
+            Create Store
+          </Button>
+          <Button className="bg-gray-500 text-white px-4 py-2 rounded shadow hover:bg-gray-600">
+            Create Shop
+          </Button>
+          <Button className="bg-green-500 text-white px-4 py-2 rounded shadow hover:bg-green-600">
+            Create Vehicle
+          </Button>
         </div>
       </div>
       <div className="overflow-x-auto">
-        <table className="min-w-full divide-y divide-gray-200">
-          <thead className="bg-abrandc-light-grey">
-            <tr>
-              <th className="py-2 text-center">STORE</th>
-              <th className="py-2 text-center">SHOP</th>
-              <th className="py-2 text-center">VEHICLE</th>
-            </tr>
-          </thead>
-        </table>
-        <div className="grid grid-cols-1 md:grid-cols-3 gap-4 pt-4">
-          {/* Column for Stock Items */}
-          <div className="md:col-span-1 space-y-4">
-            <Card
-              title="Stock Item A"
-              inventory="150 Units"
-              assets="$10,000"
-              type="stock"
-            />
-            <Card
-              title="Stock Item A"
-              inventory="150 Units"
-              assets="$10,000"
-              type="stock"
-            />
-            <Card
-              title="Stock Item A"
-              inventory="150 Units"
-              assets="$10,000"
-              type="stock"
-            />
-            {/* Add more Stock Cards here */}
+        <section className="min-w-full divide-y divide-gray-200">
+          <div className="flex justify-between p-4">
+            {/* Icon Cards */}
+            {[
+              { title: "STORES", color: "blue" },
+              { title: "SHOPS", color: "pink" },
+              { title: "VEHICLES", color: "green" },
+            ].map((item, index) => (
+              <div
+                key={index}
+                className={`text-center flex-1 flex flex-col items-center justify-center`}
+              >
+                <div
+                  className={`rounded-xl overflow-hidden bg-gradient-to-tr from-${item.color}-600 to-${item.color}-400 shadow-${item.color}-500/40 text-white shadow-lg grid place-items-center  h-16 w-16`}
+                >
+                  <IoStorefrontOutline size={40} />
+                </div>
+                <h1 className="text-xl font-semibold mt-2">{item.title}</h1>
+                {/* down arrow */}
+                <div className="flex justify-center items-center mt-2">
+                  <div className="w-2 h-2 rounded-full bg-gray-500"></div>
+                  <div className="w-2 h-2 rounded-full bg-gray-500 mx-1"></div>
+                  <div className="w-2 h-2 rounded-full bg-gray-500"></div>
+                </div>
+              </div>
+            ))}
           </div>
-
-          {/* Column for Shop Items */}
-          <div className="md:col-span-1 space-y-4">
-            <Card
-              title="Shop Item B"
-              inventory="200 Items"
-              assets="$20,000"
-              type="shop"
-            />
-            <Card
-              title="Shop Item B"
-              inventory="200 Items"
-              assets="$20,000"
-              type="shop"
-            />
-            <Card
-              title="Shop Item B"
-              inventory="200 Items"
-              assets="$20,000"
-              type="shop"
-            />
-            {/* Add more Shop Cards here */}
-          </div>
-
-          {/* Column for Vehicle Items */}
-          <div className="md:col-span-1 space-y-4">
-            <Card
-              title="Vehicle Item C"
-              inventory="10 Vehicles"
-              assets="$50,000"
-              type="vehicle"
-            />
-            <Card
-              title="Vehicle Item C"
-              inventory="10 Vehicles"
-              assets="$50,000"
-              type="vehicle"
-            />
-            <Card
-              title="Vehicle Item C"
-              inventory="10 Vehicles"
-              assets="$50,000"
-              type="vehicle"
-            />
-            {/* Add more Vehicle Cards here */}
-          </div>
+        </section>
+        <div className="grid grid-cols-1 md:grid-cols-3 gap-4 p-4">
+          {/* Columns for Items */}
+          {["stock", "shop", "vehicle"].map((type, index) => (
+            <div key={index} className="space-y-4">
+              {[1, 2, 3].map((num) => (
+                <Card
+                  key={num}
+                  title={`${type} Item ${String.fromCharCode(65 + num - 1)}`}
+                  inventory={`${num * 50} Units`}
+                  assets={`$${10 * num},000`}
+                />
+              ))}
+            </div>
+          ))}
         </div>
       </div>
     </section>
