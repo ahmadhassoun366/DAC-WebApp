@@ -2,6 +2,8 @@ import Image from "next/image";
 import { MdOutlineShoppingCart } from "react-icons/md";
 import { IoStorefrontOutline } from "react-icons/io5";
 import { CiDeliveryTruck } from "react-icons/ci";
+import { v4 as uuidv4 } from "uuid";
+import Link from "next/link";
 
 type CardProps = {
   title: string;
@@ -11,7 +13,8 @@ type CardProps = {
 };
 
 export default function Card({ title, inventory, assets, type }: CardProps) {
-  // Define gradients and shadows for different card types
+  const cardId = uuidv4();
+
   const typeSettings = {
     stock: {
       icon: <IoStorefrontOutline size={40} />,
@@ -31,7 +34,11 @@ export default function Card({ title, inventory, assets, type }: CardProps) {
   const { icon, gradient } = typeSettings[type];
 
   return (
-    <div className="relative flex flex-col rounded-xl bg-white text-gray-700 shadow-md">
+    <Link
+      href={`/dashboard/pages/stocks/${cardId}`}
+      passHref
+      className="relative flex flex-col rounded-xl bg-white text-gray-700 shadow-md"
+    >
       <div className={`flex items-center pt-4 px-4`}>
         <div
           className={`rounded-xl overflow-hidden bg-gradient-to-tr ${gradient} text-white shadow-lg grid place-items-center h-16 w-16`}
@@ -54,6 +61,6 @@ export default function Card({ title, inventory, assets, type }: CardProps) {
         </h4>
         <p className="text-sm leading-normal text-blue-gray-600">Assets</p>
       </div>
-    </div>
+    </Link>
   );
 }

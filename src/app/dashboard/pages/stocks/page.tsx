@@ -1,6 +1,6 @@
 import Button from "@/components/internal/button/button.component";
 import Card from "@/components/internal/card/card.component";
-
+import Link from "next/link";
 export default function Stocks() {
   return (
     <section className="container mx-auto px-4">
