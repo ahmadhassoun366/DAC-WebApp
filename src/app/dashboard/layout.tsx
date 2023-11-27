@@ -2,6 +2,7 @@
 import React, { useState, useEffect } from "react";
 import FooterComponent from "./layout/footer.component";
 import SidebarComponent from "./layout/sidebar.component";
+import Header from "./layout/navbar.component";
 
 const Spinner = () => {
   return (
@@ -25,8 +26,9 @@ export default function Layout({ children }: { children: React.ReactNode }) {
   return (
     <div className="flex min-h-screen">
       <SidebarComponent />
-      <div className="flex-1 dark:bg-abrandc-dark-blackish bg-white flex flex-col">
-        {/* Spinner and Children */}
+      <div className="container mx-auto p-6 flex-1 dark:bg-abrandc-dark-blackish bg-white flex flex-col">
+        
+        <Header/>
         {isChildrenLoading ? (
           <Spinner />
         ) : (

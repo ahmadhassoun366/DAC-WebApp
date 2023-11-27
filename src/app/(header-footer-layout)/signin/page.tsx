@@ -24,7 +24,6 @@ const Index = () => {
   };
   const authService = useContext(AuthContext);
 
-
   const handleLogin = async (e: React.FormEvent<HTMLFormElement>) => {
     e.preventDefault();
     toast.promise(authService.login(email, password), {

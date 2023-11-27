@@ -6,23 +6,25 @@ import { CiDeliveryTruck } from "react-icons/ci";
 
 export default function Stocks() {
   return (
-    <section className="container mx-auto p-6">
+    <section className="">
       <div className=" py-1 flex  items-center justify-between  w-full">
-        <h2 className="text-3xl font-semibold text-gray-900 dark:text-white">Stocks</h2>
+        <h2 className="text-3xl font-semibold text-gray-900 dark:text-white">
+          Stocks
+        </h2>
         <h4 className="text-xl text-gray-500">2023</h4>
       </div>
-      <div className="flex lg:justify-between lg:flex-row flex-col lg:items-end lg:pt-5 lg:pb-2 lg:px-5 items-center gap-3 justify-center">
+      <div className="flex lg:justify-between lg:flex-row flex-col lg:items-end lg:pt-5 lg:pb-2  items-center gap-3 justify-center">
         <div className="lg:text-start text-center">
           <h4>Available total amount of inventory: $1500</h4>
           <h4 className="text-blue-500">Beginning inventory: $1500</h4>
         </div>
         <div className="flex gap-2 mb-2 lg:mb-0">
-          <Button className="secondary">Create Store</Button>
+          <Button className="blue">Create Store</Button>
           <Button className="secondary">Create Shope</Button>
-          <Button className="secondary">Create Vehicle</Button> 
+          <Button className="secondary">Create Vehicle</Button>
         </div>
       </div>
-      <div className="px-5">
+      <div className="">
         <table className="table-fixed w-full divide-y divide-gray-200">
           <thead className="bg-abrandc-light-grey">
             <tr>
@@ -33,7 +35,7 @@ export default function Stocks() {
           </thead>
           <tbody>
             <tr>
-              <td className="text-center p-3">
+              <td className="text-center py-3">
                 <div className="flex lg:flex-row border-2 rounded p-2 hover:drop-shadow flex-col">
                   <div className="m-auto lg:w-2/6">
                     <div className="flex justify-center">
@@ -47,7 +49,7 @@ export default function Stocks() {
                   </div>
                 </div>
               </td>
-              <td className="text-center p-3">
+              <td className="text-center py-3">
                 <div className="flex lg:flex-row border-2 rounded p-2 hover:drop-shadow flex-col">
                   <div className="m-auto lg:w-2/6">
                     <div className="flex justify-center">
@@ -61,7 +63,7 @@ export default function Stocks() {
                   </div>
                 </div>
               </td>
-              <td className="text-center p-3">
+              <td className="text-center py-3">
                 <div className="flex lg:flex-row border-2 rounded p-2 hover:drop-shadow flex-col">
                   <div className="m-auto lg:w-2/6">
                     <div className="flex justify-center">
@@ -77,7 +79,7 @@ export default function Stocks() {
               </td>
             </tr>
             <tr>
-              <td className="text-center p-3">
+              <td className="text-center py-3">
                 <div className="flex lg:flex-row border-2 rounded p-2 hover:drop-shadow flex-col">
                   <div className="m-auto lg:w-2/6">
                     <div className="flex justify-center">
@@ -93,7 +95,7 @@ export default function Stocks() {
                   </div>
                 </div>
               </td>
-              <td className="text-center p-3">
+              <td className="text-center py-3">
                 <div className="flex lg:flex-row border-2 rounded p-2 hover:drop-shadow flex-col">
                   <div className="m-auto lg:w-2/6">
                     <div className="flex justify-center">
@@ -107,7 +109,7 @@ export default function Stocks() {
                   </div>
                 </div>
               </td>
-              <td className="text-center p-3">
+              <td className="text-center py-3">
                 <div className="flex lg:flex-row border-2 rounded p-2 hover:drop-shadow flex-col">
                   <div className="m-auto lg:w-2/6">
                     <div className="flex justify-center">

@@ -1,3 +1,5 @@
-const QUERY_KEYS = {};
+const QUERY_KEYS = {
+    
+};
 
 export default QUERY_KEYS;
