@@ -37,7 +37,7 @@ export default function Card({ title, inventory, assets, type }: CardProps) {
     <Link
       href={`/dashboard/pages/stocks/${cardId}`}
       passHref
-      className="relative flex flex-col rounded-xl bg-white text-gray-700 shadow-md"
+      className="relative flex flex-col rounded-xl dark:bg-abrandc-dark-grey bg-abrandc-light-grey  shadow-md"
     >
       <div className={`flex items-center pt-4 px-4`}>
         <div
@@ -45,17 +45,17 @@ export default function Card({ title, inventory, assets, type }: CardProps) {
         >
           {icon}
         </div>
-        <div className="ml-4">
+        <div className="ml-4 text-gray-700 dark:text-white">
           <p className="text-lg leading-normal text-blue-gray-600">{title}</p>
         </div>
       </div>
-      <div className="p-4">
+      <div className="p-4 text-gray-700 dark:text-gray-300">
         <h4 className="text-2xl font-semibold leading-snug text-blue-gray-900">
           {inventory}
         </h4>
-        <p className="text-sm leading-normal text-blue-gray-600">Inventory</p>
+        <p className="text-sm leading-normal text-blue-gray-600 ">Inventory</p>
       </div>
-      <div className="border-t border-blue-gray-50 p-4">
+      <div className="border-t border-blue-gray-50 p-4 text-gray-700 dark:text-gray-400">
         <h4 className="text-2xl font-semibold leading-snug text-blue-gray-900">
           {assets}
         </h4>
