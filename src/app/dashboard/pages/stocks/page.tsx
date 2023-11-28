@@ -7,7 +7,7 @@ import { CiDeliveryTruck } from "react-icons/ci";
 export default function Stocks() {
   return (
     <section className=" ">
-      <div className="py-4 flex items-center justify-between w-full border-b border-gray-200 dark:border-gray-700">
+      <div className=" flex items-center justify-between w-full border-b border-gray-200 dark:border-gray-700">
         <h2 className="text-3xl font-semibold text-gray-900 dark:text-white">
           Stocks
         </h2>
@@ -37,30 +37,48 @@ export default function Stocks() {
       <div className="overflow-x-auto">
         <section className="min-w-full divide-y divide-gray-200">
           <div className="flex justify-between p-4">
-            {/* Icon Cards */}
-            {[
-              { title: "STORES", color: "blue" },
-              { title: "SHOPS", color: "pink" },
-              { title: "VEHICLES", color: "green" },
-            ].map((item, index) => (
+            <div className="text-center flex-1 flex flex-col items-center justify-center">
               <div
-                key={index}
-                className={`text-center flex-1 flex flex-col items-center justify-center`}
+                className={`rounded-xl overflow-hidden bg-gradient-to-tr from-blue-600 to-blue-400 shadow-blue-500/40 text-white shadow-lg grid place-items-center  h-16 w-16`}
               >
-                <div
-                  className={`rounded-xl overflow-hidden bg-gradient-to-tr from-${item.color}-600 to-${item.color}-400 shadow-${item.color}-500/40 text-white shadow-lg grid place-items-center  h-16 w-16`}
-                >
-                  <IoStorefrontOutline size={40} />
-                </div>
-                <h1 className="text-xl font-semibold mt-2">{item.title}</h1>
-                {/* down arrow */}
-                <div className="flex justify-center items-center mt-2">
-                  <div className="w-2 h-2 rounded-full bg-gray-500"></div>
-                  <div className="w-2 h-2 rounded-full bg-gray-500 mx-1"></div>
-                  <div className="w-2 h-2 rounded-full bg-gray-500"></div>
-                </div>
+                <IoStorefrontOutline size={40} />
               </div>
-            ))}
+              <h1 className="text-xl font-semibold mt-2 dark:text-gray-200 text-gray-900">STORES</h1>
+              {/* down arrow */}
+              <div className="flex justify-center items-center mt-2">
+                <div className="w-2 h-2 rounded-full bg-gray-500"></div>
+                <div className="w-2 h-2 rounded-full bg-gray-500 mx-1"></div>
+                <div className="w-2 h-2 rounded-full bg-gray-500"></div>
+              </div>
+            </div>
+            <div className="text-center flex-1 flex flex-col items-center justify-center">
+              <div
+                className={`rounded-xl overflow-hidden bg-gradient-to-tr from-pink-600 to-pink-400 shadow-pink-500/40 text-white shadow-lg grid place-items-center  h-16 w-16`}
+              >
+                <MdOutlineShoppingCart size={40} />
+              </div>
+              <h1 className="text-xl font-semibold mt-2 dark:text-gray-200 text-gray-900">SHOPS</h1>
+              {/* down arrow */}
+              <div className="flex justify-center items-center mt-2">
+                <div className="w-2 h-2 rounded-full bg-gray-500"></div>
+                <div className="w-2 h-2 rounded-full bg-gray-500 mx-1"></div>
+                <div className="w-2 h-2 rounded-full bg-gray-500"></div>
+              </div>
+            </div>
+            <div className="text-center flex-1 flex flex-col items-center justify-center">
+              <div
+                className={`rounded-xl overflow-hidden bg-gradient-to-tr from-green-600 to-green-400 shadow-green-500/40 text-white shadow-lg grid place-items-center  h-16 w-16`}
+              >
+                <CiDeliveryTruck size={40} />
+              </div>
+              <h1 className="text-xl font-semibold mt-2 dark:text-gray-200 text-gray-900">VEHICLES</h1>
+              {/* down arrow */}
+              <div className="flex justify-center items-center mt-2">
+                <div className="w-2 h-2 rounded-full bg-gray-500"></div>
+                <div className="w-2 h-2 rounded-full bg-gray-500 mx-1"></div>
+                <div className="w-2 h-2 rounded-full bg-gray-500"></div>
+              </div>
+            </div>
           </div>
         </section>
         <div className="grid grid-cols-1 md:grid-cols-3 gap-4 p-4">

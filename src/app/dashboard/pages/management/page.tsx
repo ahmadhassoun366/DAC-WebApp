@@ -11,9 +11,11 @@ import { MdWifiProtectedSetup } from "react-icons/md";
 
 export default function Management() {
   return (
-    <section className="">
-      <div className=" py-1 flex  items-center justify-between  w-full">
-        <h2 className="text-3xl font-semibold text-gray-900 dark:text-white">Management</h2>
+    <section className="py-2">
+      <div className="flex items-center justify-between w-full  border-gray-200 dark:border-gray-700">
+        <h2 className="text-3xl font-semibold text-gray-900 dark:text-white">
+          Management
+        </h2>
         <h4 className="text-xl text-gray-500">2023</h4>
       </div>
       <div className="p-5">
