@@ -51,7 +51,7 @@ const StockDetailedPage = () => {
               Manage Items
             </Button>
           </div>
-          <table className="table-fixed w-full border-separate border border-slate-400 mt-3">
+          <table className="table-fixed w-full border-collapse border border-slate-400 mt-3">
             <thead>
               <tr className="bg-blue-400">
                 <th className="border border-slate-300 ... dark:text-white">Name</th>

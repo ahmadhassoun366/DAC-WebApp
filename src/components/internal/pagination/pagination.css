@@ -1,0 +1,45 @@
+.pagination {
+  @apply py-2;
+  @apply flex;
+  @apply justify-between;
+  @apply items-center;
+}
+.pagination .prev-button,
+.pagination .next-button {
+  @apply hover:bg-abrandc-light-grey;
+  @apply text-agrey-500;
+  @apply dark:hover:bg-abrandc-dark-grey;
+  @apply dark:text-agrey-600;
+  @apply disabled:hover:bg-transparent;
+  @apply disabled:text-agrey-200;
+  @apply disabled:dark:text-agrey-800;
+  @apply disabled:dark:hover:bg-transparent;
+  @apply rounded-lg;
+  @apply px-2;
+  @apply py-2;
+}
+.pagination .pagination-btn {
+  @apply p-2;
+  @apply w-8;
+  @apply h-8;
+  @apply rounded-full;
+  @apply flex;
+  @apply justify-center;
+  @apply items-center;
+  @apply font-medium;
+  @apply text-sm;
+  @apply text-agrey-500;
+  @apply hover:bg-abrandc-light-grey;
+  @apply dark:text-agrey-600;
+  @apply dark:hover:bg-abrandc-dark-grey;
+  @apply cursor-pointer;
+}
+.pagination .pagination-btn.active {
+  @apply bg-ablue-500;
+  @apply text-white;
+}
+
+input::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}/*# sourceMappingURL=pagination.css.map */
