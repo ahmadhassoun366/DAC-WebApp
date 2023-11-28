@@ -13,9 +13,9 @@ export default function Stocks() {
         </h2>
         <h4 className="text-xl text-gray-500">2023</h4>
       </div>
-      <div className="flex flex-col lg:flex-row justify-between items-center gap-3 p-5">
+      <div className="flex flex-col lg:flex-row justify-between items-center gap-3 p-5 shadow m-2 rounded-md dark:bg-abrandc-dark-grey bg-abrandc-light-grey">
         <div className="text-center lg:text-left">
-          <h4 className="text-lg font-medium">
+          <h4 className="text-lg font-medium dark:text-white">
             Available total amount of inventory: $1500
           </h4>
           <h4 className="text-lg text-blue-500 font-medium">
